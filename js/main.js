@@ -145,4 +145,4 @@ d3.csv("data/mental_health_cleaned.csv").then(data => {
     .attr("text-anchor", "middle")
     .text("Remote Work vs Treatment (Grouped)");
 });
-"" 
+
