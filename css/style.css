@@ -1,16 +1,105 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  padding: 20px;
-}
-h1 {
-  text-align: center;
-  color: #333;
-}
-svg {
-  display: block;
-  margin: 30px auto;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
 }
 
+.container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.chart-container {
+    transition: opacity 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px 12px;
+    font: 12px 'Inter', sans-serif;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.axis-label {
+    font-size: 12px;
+    fill: #4A5568;
+    font-weight: 500;
+}
+
+.chart-title {
+    font-size: 18px;
+    font-weight: 600;
+    fill: #2D3748;
+    text-anchor: middle;
+}
+
+.chart-container svg {
+    width: 100%;
+    height: auto;
+}
+
+.bar:hover, .hist-bar:hover, .state:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+header {
+    background: linear-gradient(to right, #3B82F6, #60A5FA);
+    padding: 2rem;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+select, input {
+    background-color: #F9FAFB;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+footer {
+    background: linear-gradient(to right, #3B82F6, #818CF8);
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    font-size: 1.125rem;
+    margin: 0.5rem 0;
+}
+
+.state {
+    transition: fill 0.3s ease;
+}
